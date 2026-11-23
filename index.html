@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APEX AERO-GT | Electric Hypercar Showroom • NRI University</title>
+  <meta name="description" content="APEX AERO-GT Electric Hypercar Showroom - Activity 3 Web Assignment for NRI University. Developed by Nagendra Varma. Group 3, Project 8.">
+  <meta name="author" content="Nagendra Varma">
+  <meta name="theme-color" content="#0A0A0C">
+  
+  <!-- Fonts: Syne, Space Grotesk, Orbitron -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="telemetry-theme">
+  <!-- Lucide SVG Symbol Sprite Sheet (Zero External Dependencies, Zero Emojis) -->
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/>
+    </symbol>
+    <symbol id="icon-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </symbol>
+    <symbol id="icon-wind" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/>
+    </symbol>
+    <symbol id="icon-battery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="16" height="10" x="2" y="7" rx="2" ry="2"/><line x1="22" x2="22" y1="11" y2="13"/>
+      <line x1="6" x2="6" y1="11" y2="13"/><line x1="10" x2="10" y1="11" y2="13"/><line x1="14" x2="14" y1="11" y2="13"/>
+    </symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+    </symbol>
+    <symbol id="icon-sliders" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4" x2="4" y1="21" y2="14"/><line x1="4" x2="4" y1="10" y2="3"/><line x1="12" x2="12" y1="21" y2="12"/><line x1="12" x2="12" y1="8" y2="3"/>
+      <line x1="20" x2="20" y1="21" y2="16"/><line x1="20" x2="20" y1="12" y2="3"/><line x1="1" x2="7" y1="14" y2="14"/><line x1="9" x2="15" y1="8" y2="8"/><line x1="17" x2="23" y1="16" y2="16"/>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"/>
+    </symbol>
+    <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"/>
+    </symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/>
+    </symbol>
+    <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+    </symbol>
+    <symbol id="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>
+    </symbol>
+    <symbol id="icon-volume-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+    </symbol>
+    <symbol id="icon-volume-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="22" x2="16" y1="9" y2="15"/><line x1="16" x2="22" y1="9" y2="15"/>
+    </symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+    </symbol>
+    <symbol id="icon-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+    </symbol>
+    <symbol id="icon-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C2.1 10.7 2 11 2 11.3V16c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/>
+    </symbol>
+    <symbol id="icon-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+    </symbol>
+    <symbol id="icon-thermometer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/>
+    </symbol>
+    <symbol id="icon-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/>
+    </symbol>
+    <symbol id="icon-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/>
+    </symbol>
+    <symbol id="icon-crosshair" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="6"/><line x1="12" x2="12" y1="18" y2="22"/>
+    </symbol>
+  </svg>
+
+  <!-- Interactive ArgentCloudburst Digital Rain Canvas Background -->
+  <div class="argent-cloudburst-container" id="argentCanvasContainer">
+    <div class="lavender-horizon-bar" id="lavenderHorizonBar"></div>
+    <canvas id="argentCloudburstCanvas"></canvas>
+    <div class="curtain-interactive-hint">
+      <span class="hint-pulse"></span>
+      <span class="hint-text">Interactive Digital Rain: Hover to sweep &bull; Click for lightning charge &bull; Hold to burst cloud</span>
+    </div>
+  </div>
+
+  <!-- Audio Telemetry & Ambient Synthesizer Floating Pill -->
+  <div class="audio-telemetry-toggle" id="audioToggleBtn" title="Toggle Hypercar Audio Telemetry">
+    <svg class="lucide-icon sound-on"><use href="#icon-volume-2"></use></svg>
+    <svg class="lucide-icon sound-off" style="display: none;"><use href="#icon-volume-x"></use></svg>
+    <span class="audio-label">AUDIO TELEMETRY</span>
+    <span class="audio-status-led"></span>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="nav-container">
+      <a href="#hero" class="brand-emblem" aria-label="APEX AERO-GT Home">
+        <div class="emblem-glyph">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="apex-vector-logo">
+            <path d="M16 3L29 27H22L16 15L10 27H3L16 3Z" fill="url(#apex-grad)" stroke="#B8A5FE" stroke-width="1.2"/>
+            <path d="M16 18L20 25H12L16 18Z" fill="#B8A5FE" opacity="0.8"/>
+            <defs>
+              <linearGradient id="apex-grad" x1="16" y1="3" x2="16" y2="27" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFFFFF"/>
+                <stop offset="0.6" stop-color="#E2E8F0"/>
+                <stop offset="1" stop-color="#7C3AED"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">APEX</span>
+          <span class="brand-sub">AERO-GT</span>
+        </div>
+        <span class="brand-badge">GROUP 3 &bull; PRJ 8</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#overview" class="nav-link active">Overview</a></li>
+        <li><a href="#configurator" class="nav-link">Configurator</a></li>
+        <li><a href="#aerodynamics" class="nav-link">Aerodynamics</a></li>
+        <li><a href="#trims" class="nav-link">Trims</a></li>
+        <li><a href="#telemetry" class="nav-link">Telemetry</a></li>
+        <li><a href="#cockpit" class="nav-link">Cockpit</a></li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="btn-cta-reserve open-modal-btn" data-trim="Nürburgring Track Edition">
+          <svg class="lucide-icon"><use href="#icon-calendar"></use></svg>
+          <span>Book Test Drive</span>
+        </button>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. Hero Stage Section -->
+    <section class="section-hero" id="overview">
+      <div class="hero-backdrop-glow"></div>
+      
+      <div class="hero-header-content">
+        <div class="hero-status-pill">
+          <span class="status-indicator live"></span>
+          <span class="pill-code">NRI UNIVERSITY WEB ASSIGNMENT &bull; GROUP 3, PROJECT 8</span>
+          <span class="status-divider">/</span>
+          <span class="pill-badge">PURE ELECTRIC HYPERCAR</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="title-primary">APEX AERO-GT</span>
+          <span class="title-sub">THE ARCHITECTURE OF VELOCITY</span>
+        </h1>
+
+        <p class="hero-description">
+          Engineered without compromise for the ultimate aerodynamic equilibrium. Quad-motor 800V silicon-carbide architecture generating 1,450 BHP with active DRS telemetry, cutting through the ArgentCloudburst digital curtain.
+        </p>
+      </div>
+
+      <!-- Hero Presentation Stage: Interactive Hypercar Visualizer -->
+      <div class="hero-stage-container" id="heroStage">
+        <div class="hypercar-canvas-wrapper" id="carVisualizerWrapper">
+          <!-- Interactive Hypercar Vector Engine -->
+          <div class="hypercar-display" id="hypercarBody">
+            <!-- Dynamic Wind Tunnel Streamline Particles Overlay -->
+            <div class="wind-tunnel-overlay active" id="windTunnelOverlay">
+              <span class="streamline line-1"></span>
+              <span class="streamline line-2"></span>
+              <span class="streamline line-3"></span>
+              <span class="streamline line-4"></span>
+              <span class="streamline line-5"></span>
+            </div>
+
+            <!-- Precision Vector Hypercar Silhouette Artwork -->
+            <svg class="hypercar-svg" id="hypercarSvg" viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <!-- Dynamic Livery Gradient linked via CSS custom properties -->
+                <linearGradient id="bodyGradient" x1="0%" y1="30%" x2="100%" y2="80%">
+                  <stop offset="0%" stop-color="var(--livery-primary, #E2E8F0)"/>
+                  <stop offset="45%" stop-color="var(--livery-secondary, #94A3B8)"/>
+                  <stop offset="85%" stop-color="var(--livery-dark, #334155)"/>
+                  <stop offset="100%" stop-color="#0A0A0C"/>
+                </linearGradient>
+
+                <linearGradient id="carbonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#24242A"/>
+                  <stop offset="50%" stop-color="#121215"/>
+                  <stop offset="100%" stop-color="#0A0A0C"/>
+                </linearGradient>
+
+                <linearGradient id="glassGradient" x1="30%" y1="0%" x2="70%" y2="100%">
+                  <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.5"/>
+                  <stop offset="35%" stop-color="#0284C7" stop-opacity="0.3"/>
+                  <stop offset="80%" stop-color="#0F172A" stop-opacity="0.85"/>
+                  <stop offset="100%" stop-color="#030712" stop-opacity="0.95"/>
+                </linearGradient>
+
+                <linearGradient id="laserGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#B8A5FE" stop-opacity="0.9"/>
+                  <stop offset="50%" stop-color="#818CF8" stop-opacity="0.6"/>
+                  <stop offset="100%" stop-color="#B8A5FE" stop-opacity="0"/>
+                </linearGradient>
+
+                <!-- Ground Shadow Blur -->
+                <filter id="hyperShadow" x="-20%" y="-20%" width="140%" height="160%">
+                  <feGaussianBlur stdDeviation="14"/>
+                </filter>
+              </defs>
+
+              <!-- Floor Ground Shadow -->
+              <ellipse cx="500" cy="380" rx="460" ry="24" fill="#000000" opacity="0.85" filter="url(#hyperShadow)"/>
+              <ellipse cx="500" cy="376" rx="380" ry="12" fill="#B8A5FE" opacity="0.18" filter="url(#hyperShadow)"/>
+
+              <!-- Car Group with dynamic perspective tilt -->
+              <g id="carGraphicGroup" class="car-graphic-group">
+                <!-- Underbody Diffuser Tunnels -->
+                <path d="M 120 340 L 880 340 L 920 355 L 80 355 Z" fill="url(#carbonGradient)"/>
+                <path d="M 820 335 L 940 338 L 950 350 L 810 348 Z" fill="#18181B" stroke="#B8A5FE" stroke-width="1" opacity="0.6"/>
+
+                <!-- Main Hypercar Monocoque & Side Profile -->
+                <!-- Front Splitter & Nose Cone -->
+                <path class="aero-splitter" id="aeroSplitter" d="M 60 338 C 80 335, 120 332, 170 330 L 190 342 L 50 344 Z" fill="url(#carbonGradient)" stroke="#B8A5FE" stroke-width="1.2"/>
+                
+                <!-- Main Bodywork Shell -->
+                <path class="car-bodywork" d="M 70 330 
+                         C 85 290, 140 260, 240 260 
+                         C 310 260, 360 272, 420 250 
+                         C 490 190, 560 170, 710 185 
+                         C 790 195, 840 230, 910 265 
+                         C 935 280, 945 305, 940 330 
+                         L 890 338 
+                         C 860 300, 780 300, 750 338 
+                         L 360 338 
+                         C 330 300, 250 300, 220 338 
+                         Z" 
+                      fill="url(#bodyGradient)" 
+                      stroke="rgba(255,255,255,0.25)" 
+                      stroke-width="1.5"/>
+
+                <!-- Sculpted Dihedral Door Air Intake & Venturi Scoop -->
+                <path d="M 370 280 C 430 270, 520 285, 600 275 C 620 295, 610 325, 590 335 L 420 335 C 380 320, 365 295, 370 280 Z" 
+                      fill="url(#carbonGradient)" 
+                      stroke="rgba(184, 165, 254, 0.4)" 
+                      stroke-width="1"/>
+
+                <!-- Cockpit Canopy & Glass Greenhous -->
+                <path class="cockpit-canopy" d="M 440 245 
+                         C 490 195, 560 175, 680 190 
+                         C 740 200, 780 230, 810 260 
+                         L 690 260 
+                         C 590 255, 510 252, 440 245 Z" 
+                      fill="url(#glassGradient)" 
+                      stroke="rgba(255,255,255,0.4)" 
+                      stroke-width="1.2"/>
+
+                <!-- Holographic HUD Beam inside Cockpit -->
+                <line x1="560" y1="210" x2="610" y2="245" stroke="#B8A5FE" stroke-width="2" stroke-dasharray="4 2" opacity="0.7"/>
+
+                <!-- Active Rear Aero Wing Assembly -->
+                <g class="active-rear-wing" id="activeRearWing">
+                  <!-- Wing Pylon Struts -->
+                  <path d="M 870 260 L 890 215 L 905 215 L 885 260 Z" fill="#27272A"/>
+                  <path d="M 915 270 L 930 218 L 945 218 L 930 270 Z" fill="#18181B"/>
+                  <!-- Active Airfoil Blade -->
+                  <path class="wing-blade" d="M 860 215 C 900 210, 960 212, 985 218 L 975 228 C 940 224, 880 223, 855 225 Z" 
+                        fill="url(#carbonGradient)" 
+                        stroke="#B8A5FE" 
+                        stroke-width="1.8"/>
+                  <path d="M 985 212 L 990 228 L 970 232 Z" fill="#B8A5FE"/>
+                </g>
+
+                <!-- Front Laser Matrix Headlight -->
+                <g class="headlight-assembly">
+                  <path d="M 75 315 L 125 312 L 140 322 L 85 324 Z" fill="#0A0A0C" stroke="#B8A5FE" stroke-width="1.5"/>
+                  <polygon points="80,317 115,315 125,321 86,322" fill="#FFFFFF" class="drl-element"/>
+                  <!-- Laser Beam Projector (Toggled by user) -->
+                  <polygon id="laserBeamCone" points="80,317 0,270 0,380 86,322" fill="url(#laserGlow)" class="laser-beam active"/>
+                </g>
+
+                <!-- Rear Telemetry Blade Tail-Light -->
+                <path d="M 925 280 L 950 282 L 945 288 L 920 285 Z" fill="#EF4444" filter="drop-shadow(0 0 6px #EF4444)"/>
+
+                <!-- Front Aero-Disc Forged Carbon Wheel -->
+                <g class="wheel-group" transform="translate(290, 338)">
+                  <circle cx="0" cy="0" r="54" fill="#09090B" stroke="#3F3F46" stroke-width="6"/>
+                  <circle cx="0" cy="0" r="42" fill="#18181B" stroke="#27272A" stroke-width="4"/>
+                  <!-- Carbon Ceramic Brake Rotor with Thermal Glow -->
+                  <circle cx="0" cy="0" r="32" fill="#27272A" stroke="#52525B" stroke-width="3" class="brake-disc-front"/>
+                  <path d="M -22 -14 L -10 -28 L 6 -24 L -6 -8 Z" fill="#E11D48" class="brake-caliper"/>
+                  <!-- Aerodynamic Rim Vanes -->
+                  <line x1="-36" y1="0" x2="36" y2="0" stroke="#71717A" stroke-width="2.5"/>
+                  <line x1="0" y1="-36" x2="0" y2="36" stroke="#71717A" stroke-width="2.5"/>
+                  <line x1="-25" y1="-25" x2="25" y2="25" stroke="#71717A" stroke-width="2.5"/>
+                  <line x1="-25" y1="25" x2="25" y2="-25" stroke="#71717A" stroke-width="2.5"/>
+                  <circle cx="0" cy="0" r="9" fill="#B8A5FE" stroke="#FFFFFF" stroke-width="1.5"/>
+                </g>
+
+                <!-- Rear Aero-Disc Forged Carbon Wheel -->
+                <g class="wheel-group" transform="translate(805, 338)">
+                  <circle cx="0" cy="0" r="56" fill="#09090B" stroke="#3F3F46" stroke-width="6"/>
+                  <circle cx="0" cy="0" r="44" fill="#18181B" stroke="#27272A" stroke-width="4"/>
+                  <!-- Rear Carbon Ceramic Brake Rotor -->
+                  <circle cx="0" cy="0" r="34" fill="#27272A" stroke="#52525B" stroke-width="3" class="brake-disc-rear"/>
+                  <path d="M -24 -15 L -12 -30 L 6 -26 L -8 -10 Z" fill="#E11D48" class="brake-caliper"/>
+                  <!-- Aerodynamic Rim Vanes -->
+                  <line x1="-38" y1="0" x2="38" y2="0" stroke="#71717A" stroke-width="2.5"/>
+                  <line x1="0" y1="-38" x2="0" y2="38" stroke="#71717A" stroke-width="2.5"/>
+                  <line x1="-27" y1="-27" x2="27" y2="27" stroke="#71717A" stroke-width="2.5"/>
+                  <line x1="-27" y1="27" x2="27" y2="-27" stroke="#71717A" stroke-width="2.5"/>
+                  <circle cx="0" cy="0" r="10" fill="#B8A5FE" stroke="#FFFFFF" stroke-width="1.5"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Quick Interactive Controls Overlay on Stage -->
+          <div class="stage-floating-controls">
+            <button class="stage-toggle-btn active" id="toggleHeadlightsBtn" title="Toggle Matrix Laser Headlights">
+              <svg class="lucide-icon"><use href="#icon-zap"></use></svg>
+              <span>LASER MATRIX</span>
+            </button>
+            <button class="stage-toggle-btn active" id="toggleWindTunnelBtn" title="Toggle Wind-Tunnel Aerodynamic Streamlines">
+              <svg class="lucide-icon"><use href="#icon-wind"></use></svg>
+              <span>AERO STREAMLINES</span>
+            </button>
+            <button class="stage-toggle-btn" id="toggleAeroModeQuick" title="Toggle Active Aerodynamic Wing Mode">
+              <svg class="lucide-icon"><use href="#icon-activity"></use></svg>
+              <span id="quickAeroModeLabel">TRACK MODE (850 KG)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Live Showroom Telemetry Matrix Bar -->
+        <div class="hero-telemetry-strip">
+          <div class="telemetry-card">
+            <div class="telemetry-icon-box">
+              <svg class="lucide-icon"><use href="#icon-gauge"></use></svg>
+            </div>
+            <div class="telemetry-data">
+              <span class="telemetry-label">0 &ndash; 100 KM/H</span>
+              <div class="telemetry-value-row">
+                <span class="telemetry-num" data-target="1.82">1.82</span>
+                <span class="telemetry-unit">SEC</span>
+              </div>
+              <span class="telemetry-sub">Sub-2s Hyper Acceleration</span>
+            </div>
+          </div>
+
+          <div class="telemetry-card">
+            <div class="telemetry-icon-box">
+              <svg class="lucide-icon"><use href="#icon-zap"></use></svg>
+            </div>
+            <div class="telemetry-data">
+              <span class="telemetry-label">PEAK OUTPUT</span>
+              <div class="telemetry-value-row">
+                <span class="telemetry-num" data-target="1450">1,450</span>
+                <span class="telemetry-unit">BHP</span>
+              </div>
+              <span class="telemetry-sub">Quad-Inverter Vectoring</span>
+            </div>
+          </div>
+
+          <div class="telemetry-card">
+            <div class="telemetry-icon-box">
+              <svg class="lucide-icon"><use href="#icon-activity"></use></svg>
+            </div>
+            <div class="telemetry-data">
+              <span class="telemetry-label">TOP SPEED</span>
+              <div class="telemetry-value-row">
+                <span class="telemetry-num" data-target="380">380</span>
+                <span class="telemetry-unit">KM/H</span>
+              </div>
+              <span class="telemetry-sub">Electronically Regulated</span>
+            </div>
+          </div>
+
+          <div class="telemetry-card">
+            <div class="telemetry-icon-box">
+              <svg class="lucide-icon"><use href="#icon-battery"></use></svg>
+            </div>
+            <div class="telemetry-data">
+              <span class="telemetry-label">WLTP RANGE</span>
+              <div class="telemetry-value-row">
+                <span class="telemetry-num" data-target="820">820</span>
+                <span class="telemetry-unit">KM</span>
+              </div>
+              <span class="telemetry-sub">120 kWh Solid-Matrix Pack</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Interactive Livery & Aero Configurator Section -->
+    <section class="section-configurator" id="configurator">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg class="lucide-icon"><use href="#icon-sliders"></use></svg>
+          <span>AERO-BESPOKE ATELIER</span>
+        </div>
+        <h2 class="section-title">INTERACTIVE LIVERY &amp; AERO CONFIGURATOR</h2>
+        <p class="section-sub">
+          Customize the exterior finish, aerodynamic package, and active DRS telemetry in real time.
+        </p>
+      </div>
+
+      <div class="configurator-grid">
+        <!-- Control Panel Left -->
+        <div class="config-panel glass-card">
+          <div class="config-group">
+            <div class="group-header">
+              <span class="group-title">EXTERIOR LIVERY SHADE</span>
+              <span class="selected-badge" id="currentLiveryName">Apex Liquid Silver</span>
+            </div>
+            <div class="color-palette-selector">
+              <button class="color-swatch-btn active" data-color="silver" data-name="Apex Liquid Silver" data-p1="#E2E8F0" data-p2="#94A3B8" data-p3="#334155" title="Apex Liquid Silver">
+                <span class="swatch-preview silver"></span>
+                <span class="swatch-title">Liquid Silver</span>
+              </button>
+              <button class="color-swatch-btn" data-color="blue" data-name="Monaco Carbon Blue" data-p1="#38BDF8" data-p2="#1D4ED8" data-p3="#0F172A" title="Monaco Carbon Blue">
+                <span class="swatch-preview blue"></span>
+                <span class="swatch-title">Monaco Blue</span>
+              </button>
+              <button class="color-swatch-btn" data-color="acid" data-name="Verde Acid" data-p1="#A3E635" data-p2="#4D7C0F" data-p3="#14532D" title="Verde Acid">
+                <span class="swatch-preview acid"></span>
+                <span class="swatch-title">Verde Acid</span>
+              </button>
+              <button class="color-swatch-btn" data-color="amber" data-name="Solaris Amber" data-p1="#FBBF24" data-p2="#D97706" data-p3="#78350F" title="Solaris Amber">
+                <span class="swatch-preview amber"></span>
+                <span class="swatch-title">Solaris Amber</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <div class="group-header">
+              <span class="group-title">CLEARCOAT &amp; COMPOSITE FINISH</span>
+              <span class="selected-badge" id="currentFinishName">Titanium High-Gloss</span>
+            </div>
+            <div class="finish-pill-group">
+              <button class="finish-btn active" data-finish="gloss">Titanium High-Gloss</button>
+              <button class="finish-btn" data-finish="satin">Stealth Satin Matte</button>
+              <button class="finish-btn" data-finish="forged">Exposed Forged Weave</button>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <div class="group-header">
+              <span class="group-title">ACTIVE AERODYNAMICS PACKAGE</span>
+              <span class="aero-status-tag" id="currentAeroState">Active Downforce: 850 KG</span>
+            </div>
+            <div class="aero-mode-switch-wrapper">
+              <button class="aero-mode-card active" id="btnModeTrack" data-mode="track">
+                <div class="mode-icon">
+                  <svg class="lucide-icon"><use href="#icon-wind"></use></svg>
+                </div>
+                <div class="mode-meta">
+                  <span class="mode-name">TRACK DOWNFORCE MODE</span>
+                  <span class="mode-spec">+28&deg; Rear Wing &bull; Front Splitters Deployed &bull; -15mm Stance</span>
+                </div>
+                <span class="mode-indicator">ACTIVE</span>
+              </button>
+
+              <button class="aero-mode-card" id="btnModeVmax" data-mode="vmax">
+                <div class="mode-icon">
+                  <svg class="lucide-icon"><use href="#icon-gauge"></use></svg>
+                </div>
+                <div class="mode-meta">
+                  <span class="mode-name">V-MAX LOW-DRAG MODE</span>
+                  <span class="mode-spec">0&deg; DRS Streamline &bull; Flaps Retracted &bull; 380 km/h Unlocked</span>
+                </div>
+                <span class="mode-indicator">SELECT</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <div class="group-header">
+              <span class="group-title">FORGED WHEEL ARCHITECTURE</span>
+            </div>
+            <div class="wheel-choice-row">
+              <label class="wheel-radio-card active">
+                <input type="radio" name="wheelChoice" value="carbon" checked>
+                <div class="radio-content">
+                  <span class="wheel-title">20"/21" Aero-Blade Carbon Discs</span>
+                  <span class="wheel-benefit">-4.8 kg unsprung mass &bull; Active brake cooling</span>
+                </div>
+              </label>
+              <label class="wheel-radio-card">
+                <input type="radio" name="wheelChoice" value="magnesium">
+                <div class="radio-content">
+                  <span class="wheel-title">Ultra-Light Forged Magnesium Spoke</span>
+                  <span class="wheel-benefit">Optimum track agility &bull; Open rotor visibility</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Telemetry Comparison Readout Right -->
+        <div class="config-readout glass-card">
+          <h3 class="readout-title">
+            <svg class="lucide-icon"><use href="#icon-activity"></use></svg>
+            <span>REAL-TIME CONFIGURATION TELEMETRY</span>
+          </h3>
+
+          <div class="readout-metric-grid">
+            <div class="metric-box">
+              <span class="m-label">AERODYNAMIC DOWNFORCE</span>
+              <span class="m-val highlight" id="telemetryDownforce">850 KG</span>
+              <span class="m-sub">at 250 km/h benchmark</span>
+            </div>
+
+            <div class="metric-box">
+              <span class="m-label">DRAG COEFFICIENT</span>
+              <span class="m-val" id="telemetryDrag">0.38 Cd</span>
+              <span class="m-sub">Optimized for high-speed apex grip</span>
+            </div>
+
+            <div class="metric-box">
+              <span class="m-label">ESTIMATED EX-SHOWROOM</span>
+              <span class="m-val currency" id="telemetryPrice">&#8377;4.50 Cr</span>
+              <span class="m-sub">N&uuml;rburgring Track Edition Spec</span>
+            </div>
+
+            <div class="metric-box">
+              <span class="m-label">LATERAL ACCELERATION</span>
+              <span class="m-val highlight" id="telemetryGForce">2.15 G</span>
+              <span class="m-sub">Peak cornering sustained</span>
+            </div>
+          </div>
+
+          <div class="aero-diagram-card">
+            <div class="diagram-header">
+              <span>ACTIVE FLOW VECTORS &bull; REAL-TIME CFD PREVIEW</span>
+              <span class="cfd-pulse">SIMULATION 60 FPS</span>
+            </div>
+            <div class="cfd-bars">
+              <div class="cfd-row">
+                <span>Front Splitter Ground Effect</span>
+                <div class="bar-track"><div class="bar-fill" id="cfdFrontSplitter" style="width: 88%;"></div></div>
+                <span class="val" id="cfdFrontVal">88%</span>
+              </div>
+              <div class="cfd-row">
+                <span>Venturi Underbody Suction</span>
+                <div class="bar-track"><div class="bar-fill" id="cfdUnderbody" style="width: 94%;"></div></div>
+                <span class="val" id="cfdUnderVal">94%</span>
+              </div>
+              <div class="cfd-row">
+                <span>Active Rear Airfoil Force</span>
+                <div class="bar-track"><div class="bar-fill" id="cfdRearWing" style="width: 90%;"></div></div>
+                <span class="val" id="cfdRearVal">90%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="config-cta-box">
+            <button class="btn-primary open-modal-btn" id="btnConfigReserve" data-trim="Nürburgring Track Edition">
+              <span>Lock Configuration &amp; Request VIP Test Drive</span>
+              <svg class="lucide-icon"><use href="#icon-chevron-right"></use></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Aerodynamics & Flow Dynamics Deep Dive -->
+    <section class="section-aerodynamics" id="aerodynamics">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg class="lucide-icon"><use href="#icon-wind"></use></svg>
+          <span>FLUID DYNAMICS BENCHMARK</span>
+        </div>
+        <h2 class="section-title">ACTIVE AERODYNAMICS &amp; GROUND EFFECT</h2>
+        <p class="section-sub">
+          Harnessing the air rather than resisting it. Venturi underbody tunnels generate vacuum downforce without inducing parasitic drag.
+        </p>
+      </div>
+
+      <div class="aero-features-grid">
+        <div class="feature-card glass-card">
+          <div class="card-num">01</div>
+          <div class="card-icon">
+            <svg class="lucide-icon"><use href="#icon-wind"></use></svg>
+          </div>
+          <h3 class="card-title">Dual Inverted Venturi Tunnels</h3>
+          <p class="card-desc">
+            Twin full-length underfloor carbon tunnels channel air from the nose to the massive rear diffuser, producing 62% of total car downforce directly onto the chassis without any top-surface drag penalty.
+          </p>
+          <div class="card-stats">
+            <span class="stat-pill">Ground Effect: 520 kg</span>
+            <span class="stat-pill">Zero Stall Geometry</span>
+          </div>
+        </div>
+
+        <div class="feature-card glass-card">
+          <div class="card-num">02</div>
+          <div class="card-icon">
+            <svg class="lucide-icon"><use href="#icon-activity"></use></svg>
+          </div>
+          <h3 class="card-title">Active DRS Biplane Airfoil</h3>
+          <p class="card-desc">
+            Electro-hydraulic actuators modulate the dual-element rear wing within 180 milliseconds. Under heavy threshold braking, it pivots +65&deg; as an aerodynamic airbrake, shedding 100-0 km/h in 26 meters.
+          </p>
+          <div class="card-stats">
+            <span class="stat-pill">180ms Actuation Speed</span>
+            <span class="stat-pill">+65&deg; Airbrake Pivot</span>
+          </div>
+        </div>
+
+        <div class="feature-card glass-card">
+          <div class="card-num">03</div>
+          <div class="card-icon">
+            <svg class="lucide-icon"><use href="#icon-cpu"></use></svg>
+          </div>
+          <h3 class="card-title">Predictive Vortex Shredding</h3>
+          <p class="card-desc">
+            Integrated ultrasonic laser sensors survey the road surface 1,000 times per second, dynamically adjusting ride height and front aero shutters to maintain an uncompromised ground-effect seal over bumps.
+          </p>
+          <div class="card-stats">
+            <span class="stat-pill">1 kHz Surface Polling</span>
+            <span class="stat-pill">Adaptive Ride Seal</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Hypercar Trims Showcase (Group 3 Rubric) -->
+    <section class="section-trims" id="trims">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg class="lucide-icon"><use href="#icon-award"></use></svg>
+          <span>GROUP 3 RUBRIC &bull; SPECIFICATION MATRIX</span>
+        </div>
+        <h2 class="section-title">HYPERCAR PRODUCTION TRIMS</h2>
+        <p class="section-sub">
+          Three bespoke configurations engineered for grand touring, circuit domination, or pure hyper-bespoke exclusivity. All prices quoted in Ex-Showroom INR.
+        </p>
+      </div>
+
+      <div class="trims-container">
+        <!-- Trim 1: Aero Sprint -->
+        <div class="trim-card glass-card" data-trim-id="sprint">
+          <div class="trim-header">
+            <span class="trim-badge">GRAND TOURING</span>
+            <h3 class="trim-title">AERO SPRINT</h3>
+            <div class="trim-price">&#8377;3.85 <span class="cr-unit">Cr</span></div>
+            <span class="price-note">Ex-Showroom India &bull; GST Applicable</span>
+          </div>
+          <div class="trim-specs">
+            <div class="spec-row">
+              <span class="spec-k">Power Output</span>
+              <span class="spec-v">1,150 BHP</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-k">0 &ndash; 100 km/h</span>
+              <span class="spec-v">2.10 Sec</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-k">Top Velocity</span>
+              <span class="spec-v">350 km/h</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-k">WLTP Range</span>
+              <span class="spec-v">750 km</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-k">Aero Package</span>
+              <span class="spec-v">Active Road Aero (550 kg)</span>
+            </div>
+          </div>
+          <ul class="trim-features">
+            <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> Dual Dual-Inverter Quad-Motor Architecture</li>
+            <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> 20" Forged Aero Aluminum Alloys</li>
+            <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> Matrix Adaptive LED Headlights</li>
+            <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> Semi-Aniline Leather &amp; Alcantara Cockpit</li>
+          </ul>
+          <button class="btn-trim-action open-modal-btn" data-trim="Aero Sprint" data-price="3.85">
+            <span>Select Aero Sprint</span>
+            <svg class="lucide-icon"><use href="#icon-chevron-right"></use></svg>
+          </button>
+        </div>
+
+        <!-- Trim 2: Nürburgring Track Edition (Featured) -->
+        <div class="trim-card glass-card featured" data-trim-id="track">
+          <div class="featured-ribbon">
+            <svg class="lucide-icon"><use href="#icon-award"></use></svg>
+            <span>MOST POPULAR BENCHMARK</span>
+          </div>
+          <div class="trim-header">
+            <span class="trim-badge highlight">TRACK BENCHMARK</span>
+            <h3 class="trim-title">N&Uuml;RBURGRING TRACK EDITION</h3>
+            <div class="trim-price">&#8377;4.50 <span class="cr-unit">Cr</span></div>
+            <span class="price-note">Ex-Showroom India &bull; GST Applicable</span>
+          </div>
+          <div class="trim-specs">
+            <div class="spec-row">
+              <span class="spec-k">Power Output</span>
+              <span class="spec-v highlight">1,450 BHP</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-k">0 &ndash; 100 km/h</span>
+              <span class="spec-v highlight">1.82 Sec</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-k">Top Velocity</span>
+              <span class="spec-v highlight">380 km/h</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-k">WLTP Range</span>
+              <span class="spec-v">820 km</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-k">Aero Package</span>
+              <span class="spec-v highlight">Full DRS Active Wing (850 kg)</span>
+            </div>
+          </div>
+          <ul class="trim-features">
+            <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> High-Revving Silicon-Carbide Quad-Motors</li>
+            <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> 20"/21" Staggered Carbon Aerodisc Wheels</li>
+            <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> 420mm Carbon-Ceramic Matrix Brake Rotors</li>
+            <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> Nordschleife Active Damper Telemetry System</li>
+            <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> FIA Carbon Yoke with Integrated OLED Display</li>
+          </ul>
+          <button class="btn-trim-action primary open-modal-btn" data-trim="Nürburgring Track Edition" data-price="4.50">
+            <span>Reserve Track Edition</span>
+            <svg class="lucide-icon"><use href="#icon-chevron-right"></use></svg>
+          </button>
+        </div>
+
+        <!-- Trim 3: Le Mans GT Hyper-Bespoke -->
+        <div class="trim-card glass-card" data-trim-id="lemans">
+          <div class="trim-header">
+            <span class="trim-badge bespoke">BESPOKE PROTOTYPE</span>
+            <h3 class="trim-title">LE MANS GT HYPER-BESPOKE</h3>
+            <div class="trim-price">&#8377;5.20 <span class="cr-unit">Cr</span></div>
+            <span class="price-note">Ex-Showroom India &bull; GST Applicable</span>
+          </div>
+          <div class="trim-specs">
+            <div class="spec-row">
+              <span class="spec-k">Power Output</span>
+              <span class="spec-v">1,600 BHP</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-k">0 &ndash; 100 km/h</span>
+              <span class="spec-v">1.69 Sec</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-k">Top Velocity</span>
+              <span class="spec-v">400+ km/h</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-k">WLTP Range</span>
+              <span class="spec-v">800 km</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-k">Aero Package</span>
+              <span class="spec-v">Hyper-LMP Extreme Downforce (1,180 kg)</span>
+            </div>
+          </div>
+          <ul class="trim-features">
+            <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> Full Exposed Tinted Carbon Monocoque</li>
+            <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> 24-Karat Gold Thermal Foil Engine Shielding</li>
+            <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> Bespoke Interior Tailored to Driver's Biometrics</li>
+            <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> FIA Track Telemetry Box with Satellite Uplink</li>
+            <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> 1-of-25 Worldwide Hand-Numbered Chassis</li>
+          </ul>
+          <button class="btn-trim-action open-modal-btn" data-trim="Le Mans GT Hyper-Bespoke" data-price="5.20">
+            <span>Commission Bespoke</span>
+            <svg class="lucide-icon"><use href="#icon-chevron-right"></use></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Engineering & Telemetry HUD Matrix -->
+    <section class="section-telemetry" id="telemetry">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg class="lucide-icon"><use href="#icon-gauge"></use></svg>
+          <span>RACE ENGINEER HUD</span>
+        </div>
+        <h2 class="section-title">ENGINEERING &amp; TELEMETRY MATRIX</h2>
+        <p class="section-sub">
+          Live simulated vehicle diagnostics. Interact with the velocity scrubber, carbon-ceramic brake thermal cycle, and 4-pack battery flow.
+        </p>
+      </div>
+
+      <div class="telemetry-dashboard-grid">
+        <!-- Interactive Speed Scrubber & Downforce Calculator -->
+        <div class="hud-box glass-card">
+          <div class="hud-box-header">
+            <span class="box-title">ACTIVE DOWNFORCE &amp; VELOCITY GAUGE</span>
+            <span class="hud-live-tag">LIVE SIM</span>
+          </div>
+          <div class="hud-box-body">
+            <div class="interactive-slider-control">
+              <div class="slider-label-row">
+                <span>Vehicle Speed Benchmark</span>
+                <span class="slider-val" id="scrubberSpeedVal">250 km/h</span>
+              </div>
+              <input type="range" id="speedScrubber" min="0" max="380" value="250" class="telemetry-range">
+              <div class="slider-scale">
+                <span>0 km/h</span>
+                <span>100</span>
+                <span>200</span>
+                <span>300</span>
+                <span>380 km/h</span>
+              </div>
+            </div>
+
+            <!-- Dynamic Gauge Dial -->
+            <div class="gauge-display-row">
+              <div class="gauge-circle-container">
+                <svg viewBox="0 0 120 120" class="gauge-svg">
+                  <circle cx="60" cy="60" r="50" class="gauge-bg"/>
+                  <circle cx="60" cy="60" r="50" class="gauge-progress" id="gaugeProgressCircle" style="stroke-dashoffset: 110;"/>
+                </svg>
+                <div class="gauge-center-text">
+                  <span class="gauge-center-num" id="gaugeCenterNum">850</span>
+                  <span class="gauge-center-unit">KG DOWNFORCE</span>
+                </div>
+              </div>
+
+              <div class="gauge-stats-col">
+                <div class="g-stat-item">
+                  <span class="label">Downforce to Mass Ratio:</span>
+                  <span class="val" id="gRatioVal">0.49:1</span>
+                </div>
+                <div class="g-stat-item">
+                  <span class="label">Air Resistance (Drag):</span>
+                  <span class="val" id="gDragVal">1,420 N</span>
+                </div>
+                <div class="g-stat-item">
+                  <span class="label">Theoretical Cornering Apex:</span>
+                  <span class="val highlight" id="gApexVal">242 km/h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Carbon-Ceramic Brake Thermal Simulator -->
+        <div class="hud-box glass-card">
+          <div class="hud-box-header">
+            <span class="box-title">CARBON-CERAMIC BRAKE THERMAL SIMULATOR</span>
+            <span class="hud-temp-tag" id="brakeTempStatus">NORMAL</span>
+          </div>
+          <div class="hud-box-body">
+            <p class="hud-hint-text">Click &amp; hold the brake button below to simulate aggressive threshold braking and watch rotor temps soar.</p>
+            
+            <div class="brake-rotor-visual">
+              <div class="rotor-disc" id="rotorDisc">
+                <div class="rotor-inner-hat">
+                  <span class="rotor-temp-readout" id="rotorTempReadout">180&deg;C</span>
+                </div>
+              </div>
+              <div class="brake-info-col">
+                <div class="info-row">
+                  <span>Front Left Rotor:</span>
+                  <span class="val" id="flBrakeTemp">180&deg;C</span>
+                </div>
+                <div class="info-row">
+                  <span>Rear Right Rotor:</span>
+                  <span class="val" id="rrBrakeTemp">174&deg;C</span>
+                </div>
+                <div class="info-row">
+                  <span>Cooling Ducts:</span>
+                  <span class="val" id="coolingDuctStatus">Ram-Air Open (45%)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="brake-action-bar">
+              <button class="btn-hold-brake" id="btnHoldBrake">
+                <svg class="lucide-icon"><use href="#icon-thermometer"></use></svg>
+                <span>HOLD TO APPLY THRESHOLD BRAKE</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Battery Thermal Matrix & Quad-Motor Flow -->
+        <div class="hud-box glass-card full-span">
+          <div class="hud-box-header">
+            <span class="box-title">800V SOLID-STATE BATTERY &amp; MOTOR INVERTER THERMALS</span>
+            <span class="hud-soc-tag">STATE OF CHARGE: 88% &bull; 800V ARCHITECTURE</span>
+          </div>
+          <div class="hud-box-body">
+            <div class="battery-quad-grid">
+              <!-- Front-Left Motor & Pack 1 -->
+              <div class="pack-module">
+                <div class="pack-name">FL &bull; MOTOR &amp; PACK 1</div>
+                <div class="pack-temp" id="pack1Temp">32.4&deg;C</div>
+                <div class="pack-bar"><div class="fill" style="width: 42%;"></div></div>
+                <div class="pack-sub">Output: 362 BHP &bull; 3,850 RPM</div>
+              </div>
+
+              <!-- Front-Right Motor & Pack 2 -->
+              <div class="pack-module">
+                <div class="pack-name">FR &bull; MOTOR &amp; PACK 2</div>
+                <div class="pack-temp" id="pack2Temp">33.1&deg;C</div>
+                <div class="pack-bar"><div class="fill" style="width: 44%;"></div></div>
+                <div class="pack-sub">Output: 362 BHP &bull; 3,850 RPM</div>
+              </div>
+
+              <!-- Rear-Left Motor & Pack 3 -->
+              <div class="pack-module">
+                <div class="pack-name">RL &bull; MOTOR &amp; PACK 3</div>
+                <div class="pack-temp" id="pack3Temp">34.8&deg;C</div>
+                <div class="pack-bar"><div class="fill" style="width: 48%;"></div></div>
+                <div class="pack-sub">Output: 363 BHP &bull; 4,100 RPM</div>
+              </div>
+
+              <!-- Rear-Right Motor & Pack 4 -->
+              <div class="pack-module">
+                <div class="pack-name">RR &bull; MOTOR &amp; PACK 4</div>
+                <div class="pack-temp" id="pack4Temp">35.0&deg;C</div>
+                <div class="pack-bar"><div class="fill" style="width: 49%;"></div></div>
+                <div class="pack-sub">Output: 363 BHP &bull; 4,100 RPM</div>
+              </div>
+            </div>
+
+            <div class="coolant-telemetry-row">
+              <span class="coolant-dot"></span>
+              <span class="coolant-text">Glycol-Water Closed Loop Chiller: Active (Flow Rate 38.2 L/min) &bull; Silicon-Carbide Inverter Efficiency: 98.6%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Cockpit & Interior Gallery -->
+    <section class="section-cockpit" id="cockpit">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg class="lucide-icon"><use href="#icon-eye"></use></svg>
+          <span>DRIVER-CENTRIC ERGONOMICS</span>
+        </div>
+        <h2 class="section-title">COCKPIT &amp; INTERIOR ARCHITECTURE</h2>
+        <p class="section-sub">
+          Minimalist purity meets fighter-jet telemetry. Constructed from lightweight structural carbon weave, aerospace titanium switches, and laser-stitched Alcantara.
+        </p>
+      </div>
+
+      <div class="cockpit-viewer-wrapper glass-card">
+        <!-- Interactive View Selector Tabs -->
+        <div class="cockpit-tab-bar">
+          <button class="cockpit-tab-btn active" data-view="yoke">
+            <svg class="lucide-icon"><use href="#icon-crosshair"></use></svg>
+            <span>CARBON-WEAVE YOKE STEERING</span>
+          </button>
+          <button class="cockpit-tab-btn" data-view="hud">
+            <svg class="lucide-icon"><use href="#icon-activity"></use></svg>
+            <span>HOLOGRAPHIC COCKPIT HUD</span>
+          </button>
+          <button class="cockpit-tab-btn" data-view="alcantara">
+            <svg class="lucide-icon"><use href="#icon-sliders"></use></svg>
+            <span>BESPOKE ALCANTARA STITCH VIEWER</span>
+          </button>
+        </div>
+
+        <!-- Cockpit Display Stage -->
+        <div class="cockpit-display-stage">
+          <!-- View 1: Carbon-Weave Yoke Steering -->
+          <div class="cockpit-view-card active" id="view-yoke">
+            <div class="interactive-hotspot-container">
+              <div class="cockpit-art-yoke">
+                <!-- SVG Vector of High-Tech Hypercar Yoke Wheel -->
+                <svg viewBox="0 0 800 450" class="interior-svg" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Cockpit Dashboard Background Silhouette -->
+                  <path d="M 50 180 L 750 180 L 780 430 L 20 430 Z" fill="#111116"/>
+                  <path d="M 220 180 L 580 180 L 610 320 L 190 320 Z" fill="#181820" stroke="rgba(255,255,255,0.08)"/>
+
+                  <!-- Holographic Curved Driver Cluster behind Yoke -->
+                  <rect x="250" y="90" width="300" height="90" rx="10" fill="#0A0A0E" stroke="#B8A5FE" stroke-width="1.5"/>
+                  <text x="400" y="130" text-anchor="middle" fill="#FFFFFF" font-family="'Orbitron', sans-serif" font-size="28" font-weight="700">000 KM/H</text>
+                  <text x="400" y="155" text-anchor="middle" fill="#B8A5FE" font-family="'Space Grotesk', sans-serif" font-size="12">TRACK TELEMETRY READY &bull; DRS ARMED</text>
+
+                  <!-- Ergonomic Carbon Yoke Steering Wheel -->
+                  <!-- Left Grip -->
+                  <path d="M 220 220 C 180 220, 160 270, 160 340 C 160 410, 190 430, 230 420 L 250 390 C 230 380, 220 360, 220 340 C 220 300, 230 260, 250 240 Z" 
+                        fill="#27272A" stroke="#52525B" stroke-width="2"/>
+                  <!-- Right Grip -->
+                  <path d="M 580 220 C 620 220, 640 270, 640 340 C 640 410, 610 430, 570 420 L 550 390 C 570 380, 580 360, 580 340 C 580 300, 570 260, 550 240 Z" 
+                        fill="#27272A" stroke="#52525B" stroke-width="2"/>
+                  <!-- Central Carbon Bridge & OLED Display -->
+                  <path d="M 250 290 L 550 290 L 520 370 L 280 370 Z" fill="#18181B" stroke="#B8A5FE" stroke-width="2"/>
+                  <!-- Integrated Wheel OLED Screen -->
+                  <rect x="330" y="305" width="140" height="50" rx="4" fill="#09090C" stroke="#7C3AED" stroke-width="1"/>
+                  <text x="400" y="328" text-anchor="middle" fill="#A3E635" font-family="'Orbitron', sans-serif" font-size="14" font-weight="700">850 KG AERO</text>
+                  <text x="400" y="345" text-anchor="middle" fill="#E2E8F0" font-family="'Space Grotesk', sans-serif" font-size="9">TORQUE VECTOR: 50/50</text>
+                  
+                  <!-- Titanium Paddle Shifters -->
+                  <rect x="190" y="270" width="16" height="60" rx="3" fill="#B8A5FE" opacity="0.9"/>
+                  <rect x="594" y="270" width="16" height="60" rx="3" fill="#B8A5FE" opacity="0.9"/>
+
+                  <!-- Rotary Dial 1 (Manettino) -->
+                  <circle cx="300" cy="330" r="14" fill="#E11D48" stroke="#FFFFFF" stroke-width="1.5"/>
+                  <!-- Rotary Dial 2 -->
+                  <circle cx="500" cy="330" r="14" fill="#3B82F6" stroke="#FFFFFF" stroke-width="1.5"/>
+                </svg>
+
+                <!-- Interactive Hotspots on Yoke -->
+                <button class="hotspot-pin pin-1" data-title="Integrated OLED Display" data-desc="Provides real-time lap telemetry, delta times, tyre carcass core temperature, and DRS state without looking away from the track.">
+                  <span class="ping"></span>
+                  <span class="dot"></span>
+                </button>
+
+                <button class="hotspot-pin pin-2" data-title="Aerospace Titanium Paddle Shifters" data-desc="Milled from Grade 5 titanium billets. Regulates 4 levels of kinetic regenerative braking down to zero pedal friction.">
+                  <span class="ping"></span>
+                  <span class="dot"></span>
+                </button>
+
+                <button class="hotspot-pin pin-3" data-title="Tactile Manettino Mode Selector" data-desc="Instant rotary switching between Road, Sport, Nürburgring Track, and V-Max speed profiles on the fly.">
+                  <span class="ping"></span>
+                  <span class="dot"></span>
+                </button>
+              </div>
+
+              <!-- Hotspot Info Box -->
+              <div class="hotspot-info-card" id="hotspotInfoCard">
+                <div class="card-top">
+                  <span class="info-badge">COCKPIT COMPONENT</span>
+                  <span class="info-title" id="hotspotTitle">Integrated OLED Display</span>
+                </div>
+                <p class="info-detail" id="hotspotDesc">Provides real-time lap telemetry, delta times, tyre carcass core temperature, and DRS state without looking away from the track.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- View 2: Holographic HUD -->
+          <div class="cockpit-view-card" id="view-hud">
+            <div class="hud-perspective-view">
+              <div class="hud-glass-pane">
+                <div class="hud-horizon-cross"></div>
+                <div class="hud-speedo">
+                  <span class="hud-big-num">248</span>
+                  <span class="hud-sub-metric">KM/H &bull; GEAR 1:1</span>
+                </div>
+                <div class="hud-target-reticle">
+                  <svg class="lucide-icon"><use href="#icon-crosshair"></use></svg>
+                  <span>APEX BRAKING POINT: 42M</span>
+                </div>
+                <div class="hud-g-meter">
+                  <span>LATERAL G: +1.84 G</span>
+                  <div class="g-ball"></div>
+                </div>
+              </div>
+              <div class="hud-explanation">
+                <h3>True-Collimated Reticle Projection</h3>
+                <p>The holographic HUD projects tactical telemetry 7.5 meters into the driver's focal plane across the windshield, aligning real-time apex markers with GPS track positioning.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- View 3: Bespoke Alcantara Stitch Viewer -->
+          <div class="cockpit-view-card" id="view-alcantara">
+            <div class="alcantara-showcase">
+              <div class="material-swatch-box">
+                <div class="weave-texture-sample" id="alcantaraTexture">
+                  <div class="stitch-line" id="stitchLine"></div>
+                </div>
+              </div>
+              <div class="material-details-col">
+                <h3>Bespoke Alcantara &amp; Laser Micro-Perforations</h3>
+                <p>Ultra-dense 1.1mm synthetic suede with contrasting double-french cross-stitching. Laser micro-perforations reveal liquid titanium mesh beneath for active cabin climate ventilation.</p>
+                <div class="stitch-selector-row">
+                  <span>Match Stitching to Livery Accent:</span>
+                  <div class="stitch-buttons">
+                    <button class="stitch-choice-btn active" data-stitch="#B8A5FE" style="--stitch-col: #B8A5FE;">Lavender Horizon</button>
+                    <button class="stitch-choice-btn" data-stitch="#38BDF8" style="--stitch-col: #38BDF8;">Monaco Blue</button>
+                    <button class="stitch-choice-btn" data-stitch="#A3E635" style="--stitch-col: #A3E635;">Verde Acid</button>
+                    <button class="stitch-choice-btn" data-stitch="#F59E0B" style="--stitch-col: #F59E0B;">Solaris Amber</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. VIP Test Drive Booking Modal -->
+  <div class="modal-backdrop" id="bookingModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-dialog glass-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Reservation Modal">
+        <svg class="lucide-icon"><use href="#icon-x"></use></svg>
+      </button>
+
+      <!-- Step 1: Form View -->
+      <div class="modal-step active" id="modalStepForm">
+        <div class="modal-header">
+          <div class="modal-tag">
+            <svg class="lucide-icon"><use href="#icon-award"></use></svg>
+            <span>NRI UNIVERSITY VIP ALLOCATION PASS</span>
+          </div>
+          <h2 class="modal-title" id="modalTitle">RESERVE VIP TRACK TEST DRIVE</h2>
+          <p class="modal-sub">
+            Experience the 1,450 BHP APEX AERO-GT on a private circuit under the guidance of an APEX Factory Test Pilot.
+          </p>
+        </div>
+
+        <form class="reservation-form" id="reservationForm">
+          <!-- Selected Trim & Pricing Summary Banner -->
+          <div class="modal-trim-summary">
+            <div class="summary-meta">
+              <span class="sum-label">CONFIGURED TRIM</span>
+              <span class="sum-val" id="modalTrimName">Nürburgring Track Edition</span>
+            </div>
+            <div class="summary-price">
+              <span class="sum-label">EX-SHOWROOM ESTIMATE</span>
+              <span class="sum-price-val" id="modalTrimPrice">&#8377;4.50 Cr</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="clientName">Full Legal Name *</label>
+              <input type="text" id="clientName" required placeholder="e.g. Nagendra Varma" class="form-input">
+            </div>
+            <div class="form-group">
+              <label for="clientEmail">Email Address *</label>
+              <input type="email" id="clientEmail" required placeholder="e.g. nagendra@example.com" class="form-input">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="clientPhone">Contact Number (+91) *</label>
+              <input type="tel" id="clientPhone" required pattern="[0-9]{10}" placeholder="9876543210" class="form-input">
+            </div>
+            <div class="form-group">
+              <label for="showroomCity">Atelier / Showroom City *</label>
+              <select id="showroomCity" required class="form-input form-select">
+                <option value="Hyderabad">Hyderabad &bull; Jubilee Hills Experience Centre</option>
+                <option value="Bengaluru">Bengaluru &bull; Lavelle Road Flagship Atelier</option>
+                <option value="Mumbai">Mumbai &bull; Bandra-Kurla Complex Studio</option>
+                <option value="Delhi">Delhi &bull; Golf Links Atelier</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="driveDate">Preferred Reservation Date *</label>
+              <input type="date" id="driveDate" required class="form-input">
+            </div>
+            <div class="form-group">
+              <label for="sessionSlot">Telemetry Track Session *</label>
+              <select id="sessionSlot" required class="form-input form-select">
+                <option value="Morning Telemetry Session (09:00 - 12:00)">Morning Telemetry Session (09:00 - 12:00)</option>
+                <option value="Sunset Track Sprint (16:00 - 18:30)">Sunset Track Sprint (16:00 - 18:30)</option>
+                <option value="Midnight Runway High-Speed Run (21:30 - 23:30)">Midnight Runway High-Speed Run (21:30 - 23:30)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="licenseConfirm" required>
+              <span class="checkmark"></span>
+              <span class="checkbox-text">I confirm possession of a valid driver's license and qualify for high-performance track telemetry briefing.</span>
+            </label>
+          </div>
+
+          <div class="modal-actions">
+            <button type="submit" class="btn-primary submit-reserve-btn" id="btnSubmitReservation">
+              <span>Generate VIP Track Pass &amp; Confirm</span>
+              <svg class="lucide-icon"><use href="#icon-chevron-right"></use></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Step 2: Confirmation VIP Pass Ticket View -->
+      <div class="modal-step" id="modalStepSuccess">
+        <div class="success-header">
+          <div class="success-icon-badge">
+            <svg class="lucide-icon"><use href="#icon-check"></use></svg>
+          </div>
+          <h2 class="success-title">VIP ALLOCATION CONFIRMED</h2>
+          <p class="success-sub">Your private track session has been secured in the APEX factory telemetry log.</p>
+        </div>
+
+        <!-- High-Tech Holographic VIP Ticket Pass -->
+        <div class="vip-ticket-pass" id="vipTicketCard">
+          <div class="ticket-header">
+            <div class="brand-unit">
+              <span class="ticket-brand">APEX AERO-GT</span>
+              <span class="ticket-badge">VIP PASS &bull; TIER 1</span>
+            </div>
+            <span class="ticket-serial" id="ticketSerialNum">APX-2026-HYD-042</span>
+          </div>
+
+          <div class="ticket-body">
+            <div class="ticket-field">
+              <span class="t-label">RESERVED DRIVER</span>
+              <span class="t-val" id="ticketDriverName">Nagendra Varma</span>
+            </div>
+            <div class="ticket-field">
+              <span class="t-label">CONFIGURED TRIM</span>
+              <span class="t-val" id="ticketTrimName">Nürburgring Track Edition (₹4.50 Cr)</span>
+            </div>
+            <div class="ticket-field">
+              <span class="t-label">EXPERIENCE LOCATION</span>
+              <span class="t-val" id="ticketLocation">Hyderabad &bull; Jubilee Hills Experience Centre</span>
+            </div>
+            <div class="ticket-field">
+              <span class="t-label">SESSION &amp; DATE</span>
+              <span class="t-val" id="ticketDateSlot">2026-12-05 &bull; Morning Session</span>
+            </div>
+          </div>
+
+          <div class="ticket-footer">
+            <div class="barcode-matrix">
+              <span class="bar-col b1"></span><span class="bar-col b2"></span><span class="bar-col b3"></span>
+              <span class="bar-col b1"></span><span class="bar-col b4"></span><span class="bar-col b2"></span>
+              <span class="bar-col b3"></span><span class="bar-col b1"></span><span class="bar-col b2"></span>
+            </div>
+            <span class="ticket-auth-text">AUTHORIZED BY NRI UNIVERSITY AUTOMOTIVE LAB</span>
+          </div>
+        </div>
+
+        <div class="success-actions">
+          <button class="btn-secondary" id="btnPrintTicket">
+            <svg class="lucide-icon"><use href="#icon-award"></use></svg>
+            <span>Save Digital Pass</span>
+          </button>
+          <button class="btn-primary" id="btnCloseSuccessModal">
+            <span>Return to Showroom</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Toast Notification Element -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- 8. Footer with Originkit hero-55 Scramble Text -->
+  <footer class="showroom-footer">
+    <div class="footer-inner">
+      <div class="footer-top-row">
+        <div class="footer-brand-col">
+          <div class="brand-emblem-inline">
+            <svg viewBox="0 0 32 32" fill="none" class="apex-vector-logo mini">
+              <path d="M16 3L29 27H22L16 15L10 27H3L16 3Z" fill="#B8A5FE"/>
+            </svg>
+            <span class="brand-title">APEX AERO-GT</span>
+          </div>
+          <p class="brand-tagline">
+            Next-generation 1,450 BHP electric hypercar engineered for pure downforce telemetry and zero carbon compromises.
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="col-heading">NAVIGATION</span>
+          <ul>
+            <li><a href="#overview">Overview &bull; Aero Silhouettes</a></li>
+            <li><a href="#configurator">Livery Atelier</a></li>
+            <li><a href="#aerodynamics">CFD Ground Effect</a></li>
+            <li><a href="#trims">Production Trims</a></li>
+            <li><a href="#telemetry">Telemetry HUD</a></li>
+            <li><a href="#cockpit">Cockpit Ergonomics</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="col-heading">SHOWROOM LOCATIONS (INDIA)</span>
+          <ul>
+            <li>Hyderabad &bull; Jubilee Hills Atelier</li>
+            <li>Bengaluru &bull; Lavelle Road Salon</li>
+            <li>Mumbai &bull; Bandra-Kurla Studio</li>
+            <li>Delhi &bull; Golf Links Flagship</li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="col-heading">ACADEMIC RUBRIC</span>
+          <div class="academic-meta-card">
+            <div class="meta-line"><strong>Institution:</strong> NRI University</div>
+            <div class="meta-line"><strong>Curriculum:</strong> Web Technologies Assignment</div>
+            <div class="meta-line"><strong>Group:</strong> Group 3 &bull; Project 8</div>
+            <div class="meta-line"><strong>Topic:</strong> Luxury Car Showroom</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scramble Text Effect Attribution Banner (Hero-55 Originkit) -->
+      <div class="scramble-attribution-banner">
+        <div class="scramble-text-wrapper">
+          <span class="scramble-static">Website developed for NRI University Web Assignment &bull; Made by </span>
+          <span class="scramble-target" id="scrambleAuthor" data-original="Nagendra Varma">Nagendra Varma</span>
+        </div>
+        <button class="scramble-replay-btn" id="scrambleReplayBtn" title="Re-trigger Scramble Text Effect">
+          <svg class="lucide-icon"><use href="#icon-refresh"></use></svg>
+          <span>RE-ENCRYPT</span>
+        </button>
+      </div>
+
+      <div class="footer-bottom-row">
+        <span class="copyright-notice">&copy; 2026 APEX AERO-GT &bull; All hypercar telemetry specifications simulated for educational purposes. Strictly Zero Emojis &bull; 100% Vanilla ES6.</span>
+        <span class="telemetry-ping">
+          <span class="ping-led"></span>
+          <span>TELEMETRY STREAM: 60 FPS SOLID</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
