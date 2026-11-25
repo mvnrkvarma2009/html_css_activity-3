@@ -142,10 +142,10 @@
 
       <!-- Nav Actions -->
       <div class="nav-actions">
-        <button class="btn-cta-reserve open-modal-btn" data-trim="Nürburgring Track Edition">
+        <a href="#bookingModal" class="btn-cta-reserve open-modal-btn" data-trim="Nürburgring Track Edition">
           <svg class="lucide-icon"><use href="#icon-calendar"></use></svg>
           <span>Book Test Drive</span>
-        </button>
+        </a>
         <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -432,23 +432,29 @@
               <span class="group-title">EXTERIOR LIVERY SHADE</span>
               <span class="selected-badge" id="currentLiveryName">Apex Liquid Silver</span>
             </div>
+            <!-- Pure CSS Livery Color Switcher -->
+            <input type="radio" name="car-livery" id="livery-silver" class="livery-radio" checked>
+            <input type="radio" name="car-livery" id="livery-blue" class="livery-radio">
+            <input type="radio" name="car-livery" id="livery-acid" class="livery-radio">
+            <input type="radio" name="car-livery" id="livery-amber" class="livery-radio">
+
             <div class="color-palette-selector">
-              <button class="color-swatch-btn active" data-color="silver" data-name="Apex Liquid Silver" data-p1="#E2E8F0" data-p2="#94A3B8" data-p3="#334155" title="Apex Liquid Silver">
+              <label for="livery-silver" class="color-swatch-btn label-silver" title="Apex Liquid Silver">
                 <span class="swatch-preview silver"></span>
                 <span class="swatch-title">Liquid Silver</span>
-              </button>
-              <button class="color-swatch-btn" data-color="blue" data-name="Monaco Carbon Blue" data-p1="#38BDF8" data-p2="#1D4ED8" data-p3="#0F172A" title="Monaco Carbon Blue">
+              </label>
+              <label for="livery-blue" class="color-swatch-btn label-blue" title="Monaco Carbon Blue">
                 <span class="swatch-preview blue"></span>
                 <span class="swatch-title">Monaco Blue</span>
-              </button>
-              <button class="color-swatch-btn" data-color="acid" data-name="Verde Acid" data-p1="#A3E635" data-p2="#4D7C0F" data-p3="#14532D" title="Verde Acid">
+              </label>
+              <label for="livery-acid" class="color-swatch-btn label-acid" title="Verde Acid">
                 <span class="swatch-preview acid"></span>
                 <span class="swatch-title">Verde Acid</span>
-              </button>
-              <button class="color-swatch-btn" data-color="amber" data-name="Solaris Amber" data-p1="#FBBF24" data-p2="#D97706" data-p3="#78350F" title="Solaris Amber">
+              </label>
+              <label for="livery-amber" class="color-swatch-btn label-amber" title="Solaris Amber">
                 <span class="swatch-preview amber"></span>
                 <span class="swatch-title">Solaris Amber</span>
-              </button>
+              </label>
             </div>
           </div>
 
@@ -575,10 +581,10 @@
           </div>
 
           <div class="config-cta-box">
-            <button class="btn-primary open-modal-btn" id="btnConfigReserve" data-trim="Nürburgring Track Edition">
+            <a href="#bookingModal" class="btn-primary open-modal-btn" id="btnConfigReserve" data-trim="Nürburgring Track Edition">
               <span>Lock Configuration &amp; Request VIP Test Drive</span>
               <svg class="lucide-icon"><use href="#icon-chevron-right"></use></svg>
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -695,10 +701,10 @@
             <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> Matrix Adaptive LED Headlights</li>
             <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> Semi-Aniline Leather &amp; Alcantara Cockpit</li>
           </ul>
-          <button class="btn-trim-action open-modal-btn" data-trim="Aero Sprint" data-price="3.85">
+          <a href="#bookingModal" class="btn-trim-action open-modal-btn" data-trim="Aero Sprint" data-price="3.85">
             <span>Select Aero Sprint</span>
             <svg class="lucide-icon"><use href="#icon-chevron-right"></use></svg>
-          </button>
+          </a>
         </div>
 
         <!-- Trim 2: Nürburgring Track Edition (Featured) -->
@@ -742,10 +748,10 @@
             <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> Nordschleife Active Damper Telemetry System</li>
             <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> FIA Carbon Yoke with Integrated OLED Display</li>
           </ul>
-          <button class="btn-trim-action primary open-modal-btn" data-trim="Nürburgring Track Edition" data-price="4.50">
+          <a href="#bookingModal" class="btn-trim-action primary open-modal-btn" data-trim="Nürburgring Track Edition" data-price="4.50">
             <span>Reserve Track Edition</span>
             <svg class="lucide-icon"><use href="#icon-chevron-right"></use></svg>
-          </button>
+          </a>
         </div>
 
         <!-- Trim 3: Le Mans GT Hyper-Bespoke -->
@@ -785,10 +791,10 @@
             <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> FIA Track Telemetry Box with Satellite Uplink</li>
             <li><svg class="lucide-icon"><use href="#icon-check"></use></svg> 1-of-25 Worldwide Hand-Numbered Chassis</li>
           </ul>
-          <button class="btn-trim-action open-modal-btn" data-trim="Le Mans GT Hyper-Bespoke" data-price="5.20">
+          <a href="#bookingModal" class="btn-trim-action open-modal-btn" data-trim="Le Mans GT Hyper-Bespoke" data-price="5.20">
             <span>Commission Bespoke</span>
             <svg class="lucide-icon"><use href="#icon-chevron-right"></use></svg>
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -1105,9 +1111,9 @@
   <!-- 7. VIP Test Drive Booking Modal -->
   <div class="modal-backdrop" id="bookingModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
     <div class="modal-dialog glass-card">
-      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Reservation Modal">
+      <a href="#" class="modal-close-btn" id="modalCloseBtn" aria-label="Close Reservation Modal">
         <svg class="lucide-icon"><use href="#icon-x"></use></svg>
-      </button>
+      </a>
 
       <!-- Step 1: Form View -->
       <div class="modal-step active" id="modalStepForm">
@@ -1248,9 +1254,9 @@
             <svg class="lucide-icon"><use href="#icon-award"></use></svg>
             <span>Save Digital Pass</span>
           </button>
-          <button class="btn-primary" id="btnCloseSuccessModal">
+          <a href="#" class="btn-primary" id="btnCloseSuccessModal">
             <span>Return to Showroom</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -1321,7 +1327,7 @@
       </div>
 
       <div class="footer-bottom-row">
-        <span class="copyright-notice">&copy; 2026 APEX AERO-GT &bull; All hypercar telemetry specifications simulated for educational purposes. Strictly Zero Emojis &bull; 100% Vanilla ES6.</span>
+        <span class="copyright-notice">&copy; 2026 APEX AERO-GT &bull; All hypercar telemetry specifications simulated for educational purposes. Strictly Zero Emojis &bull; 100% Pure HTML5 &amp; CSS3 (Zero JavaScript).</span>
         <span class="telemetry-ping">
           <span class="ping-led"></span>
           <span>TELEMETRY STREAM: 60 FPS SOLID</span>
@@ -1330,6 +1336,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  
 </body>
 </html>

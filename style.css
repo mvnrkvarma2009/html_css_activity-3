@@ -2774,3 +2774,92 @@ section {
     align-items: flex-start;
   }
 }
+
+
+/* ==========================================================================
+   PURE HTML5 & CSS3 INTERACTIVITY (ZERO JAVASCRIPT)
+   ========================================================================== */
+
+/* Pure CSS Modal Support via :target */
+.modal-backdrop {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal-backdrop:target {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  display: flex !important;
+}
+
+.modal-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--text-dim, #94A3B8);
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #ffffff;
+}
+
+/* Pure CSS Livery Radios */
+.livery-radio {
+  display: none !important;
+}
+
+.color-swatch-btn {
+  cursor: pointer !important;
+  user-select: none;
+}
+
+/* Active swatch outline */
+#livery-silver:checked ~ .color-palette-selector .label-silver,
+#livery-blue:checked ~ .color-palette-selector .label-blue,
+#livery-acid:checked ~ .color-palette-selector .label-acid,
+#livery-amber:checked ~ .color-palette-selector .label-amber {
+  border-color: #B8A5FE !important;
+  background: rgba(184, 165, 254, 0.12) !important;
+  box-shadow: 0 0 16px rgba(184, 165, 254, 0.3) !important;
+}
+
+/* Live Dynamic Car Color Finish via CSS Custom Properties */
+body:has(#livery-silver:checked),
+:root:has(#livery-silver:checked) {
+  --livery-primary: #E2E8F0 !important;
+  --livery-secondary: #94A3B8 !important;
+  --livery-dark: #334155 !important;
+}
+
+body:has(#livery-blue:checked),
+:root:has(#livery-blue:checked) {
+  --livery-primary: #38BDF8 !important;
+  --livery-secondary: #1D4ED8 !important;
+  --livery-dark: #0F172A !important;
+}
+
+body:has(#livery-acid:checked),
+:root:has(#livery-acid:checked) {
+  --livery-primary: #A3E635 !important;
+  --livery-secondary: #4D7C0F !important;
+  --livery-dark: #14532D !important;
+}
+
+body:has(#livery-amber:checked),
+:root:has(#livery-amber:checked) {
+  --livery-primary: #FBBF24 !important;
+  --livery-secondary: #D97706 !important;
+  --livery-dark: #78350F !important;
+}
+
+/* Ensure smooth native navigation */
+html {
+  scroll-behavior: smooth !important;
+}
